@@ -4,6 +4,8 @@
 	</head>
 
 	<body>
+		<div th:include="_links :: security" />
+
 		<h2>All Teammates</h2>
 		<ul>
 			<li th:each="t : ${teammates}">

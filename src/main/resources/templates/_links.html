@@ -7,4 +7,16 @@
 			</li>
 		</ul>
 	</div>
+	<div th:fragment="security">
+
+	    <div>
+	        <span sec:authentication="name" /> has
+	        <span sec:authentication="authorities" />
+	        <form th:action="@{/logout}" method="post">
+	            <input type="submit" value="Sign Out"/>
+	        </form>
+	    </div>
+	    <hr />
+
+</div>
 </html>

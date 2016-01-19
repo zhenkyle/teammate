@@ -4,6 +4,8 @@
 	</head>
 
 	<body>
+		<div th:include="_links :: security" />
+
 		<h2>Edit a teammate</h2>
 
 		<form th:action="${putLink.href}" th:object="${teammate}"
