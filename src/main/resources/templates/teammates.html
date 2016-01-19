@@ -15,7 +15,8 @@ ${t.teammate.lastName} + ' plays ' + ${t.teammate.position}"/>
 			</li>
 		</ul>
 
-		<h2>Create a new teammate</h2>
+	    <div sec:authorize="hasRole('ROLE_ADMIN')">
+    	<h2>Create a new teammate</h2>
 
 		<form th:action="${postLink.href}" th:object="${teammate}"
 method="post">
@@ -24,6 +25,7 @@ method="post">
 			<input type="text" th:field="*{position}" />
 			<input type="submit" />
 		</form>
+	    </div>
 
 		<div th:include="_links :: nav"/>
 	</body>
