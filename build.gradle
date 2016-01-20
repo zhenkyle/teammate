@@ -33,6 +33,7 @@ dependencies {
 	compile("org.thymeleaf.extras:thymeleaf-extras-springsecurity4")
 	compile("org.springframework.hateoas:spring-hateoas")
 	compile("com.h2database:h2")
+	compile("mysql:mysql-connector-java")
 }
 
 

@@ -16,6 +16,8 @@ public class DatabaseLoader {
 
 	@PostConstruct
 	private void initDatabase() {
+		teammateRepository.deleteAll();
+
 		Teammate roy = new Teammate("Roy", "Clarkson");
 		roy.setPosition("1st base");
 		teammateRepository.save(roy);
